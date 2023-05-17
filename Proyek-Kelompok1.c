@@ -67,3 +67,56 @@ int main(int banyakArgumen, char *argumen[])
     }
     else if (banyakArgumen == 3)
     {
+        // Bagian login
+        char usernameInput[30], passwordInput[20];
+        strcpy(usernameInput, argumen[1]);
+        strcpy(passwordInput, argumen[2]);
+    
+        // Membuka file Login.bin untuk membaca username dan password
+        FILE *fptr;
+
+        if ((fptr = fopen("Login.bin", "rb")) == NULL)
+        {
+            printf("Gagal membuka file!");
+            return EXIT_FAILURE;
+        }
+    
+        // Memisahkan string dan password yang ada di file
+        char namepass[50];
+        fread(namepass, sizeof(char), sizeof(namepass) / sizeof(char), fptr);
+
+        char *string[3];
+        char username[30], password[20];
+        int ctrl = 0;
+
+        string[0] = strtok(namepass, " ");
+        while (string[ctrl++] != NULL)
+        {
+            string[ctrl] = strtok(NULL, " ");
+        }
+    
+        // Menyalin nilai string ke variabel username dan password
+        strcpy(username, string[0]);
+        strcpy(password, string[1]);
+    
+        // Mengecek apakah usernameInput dan passwordInput sama dengan dalam file
+        if ((strcmp(usernameInput, username) == 0) && (strcmp(passwordInput, password) == 0))
+        {
+                        printf("Selamat, Anda berhasil login!\n");
+        }
+        else
+        {
+            printf("Anda gagal login!\n");
+            printf("Username atau password yang Anda masukkan salah atau tidak terdaftar\n");
+            printf("Silakan periksa kembali username dan password Anda atau registrasi terlebih dahulu untuk membuat akun\n");
+            return EXIT_FAILURE;
+        }
+        // Menutup file Login.bin    
+        fclose(fptr);
+    }
+    else
+    {
+        printf("Argumen yang dimasukkan tidak valid. Silakan periksa kembali cara penggunaan program.\n");
+        return EXIT_FAILURE;
+    }
+    
