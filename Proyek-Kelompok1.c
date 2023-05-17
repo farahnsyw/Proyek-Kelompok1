@@ -206,9 +206,84 @@ int main(int banyakArgumen, char *argumen[])
     } else {
         printf("Jawaban Anda salah.\n");
     }
+    
+    // Pertanyaan 6
+    printf("Binatang yang suka makan biji kopi dan kotorannya bisa dijadikan kopi?\n");
+    printf("A. Lebah\n");
+    printf("B. kucing\n");
+    printf("C. luwak\n");
+    printf("D. sapi\n");
+    
+    printf("masukkan jawaban :" );
+    scanf("%c", &jawaban);
+
+    if (jawaban == 'C' || jawaban == 'c') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 7
+    printf("Siapa pencipta lagu Indonesia Raya?\n");
+    printf("A. W.R Soepratman\n");
+    printf("B. Habibie\n");
+    printf("C. Ivan Gunawan\n");
+    printf("D. Jokowi Dodo\n");
+    
+    printf("masukkan jawaban :" );
+    scanf(" %c", &jawaban);
+
+    if (jawaban == 'A' || jawaban == 'a') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 8
+    printf("Siapa nama Nabi yang pernah ditelan ikan paus?\n");
+    printf("A. Adam\n");
+    printf("B. Yunus\n");
+    printf("C. Isa\n");
+    printf("D. Musa\n");
+    
+    printf("masukkan jawaban :" );        
+    scanf(" %c", &jawaban);
+
+    if (jawaban == 'B' || jawaban == 'b') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 9
+    printf("Mamalia terbesar di dunia?\n");
+    printf("A. Jerapah\n");
+    printf("B. Singa\n");
+    printf("C. Harimau\n");
+    printf("D. Paus Biru\n");
+    
+    printf("masukkan jawaban :" );        
+    scanf(" %c", &jawaban);
+
+    if (jawaban == 'D' || jawaban == 'd') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 10
+    printf("Apa nama kerajaan pertama kali berdiri di Indonesia?\n");
+    printf("A. Majapahit\n");
+    printf("B. Perlak\n");
+    printf("C. Kutai\n");
+    printf("D. Kediri\n");
 
     // Hasil
-    printf("\nAnda berhasil menjawab %d dari 5 pertanyaan.\n", benar);
+    printf("\nAnda berhasil menjawab %d dari 10 pertanyaan.\n", benar);
 
     return 0;
 }
