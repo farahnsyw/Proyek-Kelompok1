@@ -119,4 +119,96 @@ int main(int banyakArgumen, char *argumen[])
         printf("Argumen yang dimasukkan tidak valid. Silakan periksa kembali cara penggunaan program.\n");
         return EXIT_FAILURE;
     }
-    
+    char jawaban;
+    int benar = 0;
+
+    // Pertanyaan 1
+    printf("1. Apa ibukota negara Indonesia?\n");
+    printf("A. Jakarta\n");
+    printf("B. Bandung\n");
+    printf("C. Surabaya\n");
+    printf("D. Yogyakarta\n");
+
+    printf("Masukkan jawaban: ");
+    scanf(" %c", &jawaban);
+
+    if (jawaban == 'A' || jawaban == 'a') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 2
+    printf("\n2. Siapakah penemu telepon?\n");
+    printf("A. Alexander Graham Bell\n");
+    printf("B. Thomas Edison\n");
+    printf("C. Nikola Tesla\n");
+    printf("D. Isaac Newton\n");
+
+    printf("Masukkan jawaban: ");
+    scanf(" %c", &jawaban);
+
+    if (jawaban == 'A' || jawaban == 'a') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 3
+    printf("\n3. Apa warna dasar dalam model warna RGB?\n");
+    printf("A. Merah\n");
+    printf("B. Hijau\n");
+    printf("C. Biru\n");
+    printf("D. Kuning\n");
+
+    printf("Masukkan jawaban: ");
+    scanf(" %c", &jawaban);
+
+    if (jawaban == 'C' || jawaban == 'c') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 4
+    printf("\n4. Berapa jumlah planet dalam Tata Surya?\n");
+    printf("A. 7\n");
+    printf("B. 8\n");
+    printf("C. 9\n");
+    printf("D. 10\n");
+
+    printf("Masukkan jawaban: ");
+    scanf(" %c", &jawaban);
+
+    if (jawaban == 'B' || jawaban == 'b') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Pertanyaan 5
+    printf("\n5. Apa nama ilmuwan terkenal yang merumuskan teori relativitas?\n");
+    printf("A. Albert Einstein\n");
+    printf("B. Isaac Newton\n");
+    printf("C. Galileo Galilei\n");
+    printf("D. Charles Darwin\n");
+
+    printf("Masukkan jawaban: ");
+    scanf(" %c", &jawaban);
+
+    if (jawaban == 'A' || jawaban == 'a') {
+        printf("Jawaban Anda benar!\n");
+        benar++;
+    } else {
+        printf("Jawaban Anda salah.\n");
+    }
+
+    // Hasil
+    printf("\nAnda berhasil menjawab %d dari 5 pertanyaan.\n", benar);
+
+    return 0;
+}
